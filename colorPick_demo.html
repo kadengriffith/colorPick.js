@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>colorPick.js Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <!-- Please include the following file -->
+  <script src="colorPick.js" type="text/javascript"></script>
+  <!-- DIRECTIONS
+    Use:     <div class="colorPick"></div>
+             Inserted into your HTML ( see below ) creates a new colorPick HTML object.
+
+    Styling: The styles below dicate how the colorPick.js object looks in the HTML environment.
+             You can do all the fancy styling from here or use your own custom stylesheet.
+             The world is yours, when it comes to implementation.
+  -->
+  <style>
+    html, body {
+      font-family:'Dosis', sans-serif;
+    }
+    /* Main colorPick.js DOM Elements */
+    .colorPick {
+      display:block;
+      height:265px;
+      width:400px;
+      font-weight:400;
+      font-size:20px;
+      text-shadow:0px 0px 2px rgba(0, 0, 0, 0.2);
+      text-align:center;
+      background-color:#cdd;
+      border:3px solid #333;
+      border-radius:3px;
+    }
+    .colorPick_preview {
+      display:block;
+      height:100px;
+      width:398px;
+      background-color:#fff;
+      border:1px dotted #333;
+    }
+    /* Range Slider Styling */
+    input[type=range].colorPick_rgbslider {
+      height:16px;
+      width:80%;
+      background:none;
+      -webkit-appearance:none;
+    }
+    input[type=range].colorPick_rgbslider:last-of-type {
+      margin-bottom:12px;
+    }
+    input[type=range].colorPick_rgbslider:focus {
+      outline-width:0;
+    }
+    /* Slider Defaults */
+    input[type=range].colorPick_rgbslider::-webkit-slider-thumb {
+      -webkit-appearance:none; /* Override default look */
+      appearance:none;
+      width:10px; /* Set a specific slider handle width */
+      height:20px; /* Slider handle height */
+      cursor:pointer; /* Cursor on hover */
+      border-radius:50%; /* Circular */
+      background-color:#333; /* Overridden Fallback */
+      box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+    /* Slider Overrides */
+    input[type=range].colorPick_rgbslider.RED::-webkit-slider-thumb {
+      background-color:#e74c3c; /* Red background */
+    }
+    input[type=range].colorPick_rgbslider.RED::-moz-range-thumb {
+      background-color:#e74c3c; /* Red background */
+    }
+    input[type=range].colorPick_rgbslider.GREEN::-webkit-slider-thumb {
+      background-color:#27ae60; /* Green background */
+    }
+    input[type=range].colorPick_rgbslider.GREEN::-moz-range-thumb {
+      background-color:#27ae60; /* Green background */
+    }
+    input[type=range].colorPick_rgbslider.BLUE::-webkit-slider-thumb {
+      background-color:#2980b9; /* Blue background */
+    }
+    input[type=range].colorPick_rgbslider.BLUE::-moz-range-thumb {
+      background:#2980b9; /* Blue background */
+    }
+  </style>
+</head>
+<body>
+  <!-- DEMO -->
+    colorPick.js Demo : Last Update -> Oct 28, 2017
+    <hr>
+    <div class="colorPick"></div>
+    *Use the sliders to manipulate the color in the subview
+  <!-- @END DEMO -->
+</body>
+</html>
